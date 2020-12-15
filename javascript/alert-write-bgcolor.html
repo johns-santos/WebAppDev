@@ -8,6 +8,10 @@
 <script>
   //add alert here
   window.alert("Welcome to my page!");
+
+  let userColor = window.prompt("Enter a color.", "");
+  let userColorCap = userColor.charAt(0).toUpperCase() + userColor.slice(1)
+  
 </script>
 <title>Alert, Write, Change Background Color</title>
 </head>
@@ -17,10 +21,18 @@
   <button onclick="document.body.style.backgroundColor='red';">Red</button>
   <p>Click the button to turn the page:</p>
   <button onclick="document.body.style.backgroundColor='blue';">Blue</button>
-  <script>
-    //write to screen here
-    document.write("<p>This was created by javascript</p>");
-  </script>
+
+  <p>Click the button to turn the page:</p>
+  <button
+    onclick = "document.body.style.backgroundColor = userColor;">
+    <script>
+      document.write(userColorCap)
+    </script>
+  </button>
+  
+   
+
+   
 </main>
 </body>
 </html>
