@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="../normalize.css">
+<link rel="stylesheet" href="../styles.css">
+<script>
+  const rockStars = [];
+  rockStars[0] = prompt("Who is your favorite rock star?", "");
+  /*
+  Ask the user how many of this rockstar's songs she has downloaded and store the result in a variable.
+  */
+  const userDownloads = [];
+  userDownloads[0] = prompt("How many of the rock star's songs have you downloaded?") || 0;
+
+  rockStars[1] = prompt("And your next favorite rock star?", "");
+  /*
+  Ask the user how many of this rockstar's songs she has downloaded
+  and store the result in a variable.
+  */
+  userDownloads[1] = prompt("How many of the rock star's songs have you downloaded?") || 0;
+</script>
+<title>JavaScript Operators</title>
+</head>
+<body>
+<main>
+  <!--
+  Let the user know how many more of her favorite rockstar's songs
+  she has than of her second favorite rockstar's songs.
+-->
+  <p>
+    <script>
+document.write("You have downloaded " + userDownloads[0] + " songs from " + rockStars[0] + ".");
+document.write("<br><br><br>")
+document.write("You have downloaded " + userDownloads[1] + " songs from " + rockStars[1] + ".");
+document.write("<br><br><br>")
+document.write("You have downloaded " + (userDownloads[0] - userDownloads[1]) + " more songs from " + rockStars[0] + " than you have from " + rockStars[1] + ".");
+</script>
+</p>
+
+</main>
+</body>
+</html>
