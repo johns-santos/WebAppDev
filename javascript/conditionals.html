@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="../normalize.css" />
+    <link rel="stylesheet" href="../styles.css" />
+
+    <script>
+      function greetUser () {
+        let dominantHand
+        let lastName
+
+        dominantHand = prompt("Enter your domnant hand?", "") || ""
+        if (dominantHand !== "right" && dominantHand !== "left") {
+          dominantHand = prompt("Try again: right or left", "") || ""
+        }
+
+        lastName = prompt("Enter your last name.", "") || "";
+        // Add FIRST letter capitial character check
+        var firstLetter = lastName.substring(0,1);
+        if (lastName.length === 0) {
+          lastName = prompt("Pleae enter last name.", "") || "";
+        } else if (! isNaN(lastName)) {
+          lastName = prompt("Last name can not include numbers. Re-enter:", "") || "";
+           // Add FIRST letter capitial character check
+        } else if (firstLetter === firstLetter.toLowerCase()) {
+          lastName = prompt("Names begin with capital letters. Re-enter last name: ", "") || "";
+        }
+
+        switch (dominantHand) {
+          case "right":
+            alert("Hello RIghty " + lastName + "!")
+            break
+          case "left":
+            alert("Hello Lefty " + lastName + "!")
+            break
+          default:
+            alert(dominantHand + " is not a valid value for dominant hand!")
+        }
+      }
+
+    </script>
+    <title>Conditionals</title>
+  </head>
+  <body>
+    <main>
+      <button onclick="greetUser();">Greet User</button>
+    </main>
+  </body>
+</html>
