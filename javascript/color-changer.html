@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="../normalize.css" />
+    <link rel="stylesheet" href="../styles.css" />
+    <title>Color Changer</title>
+    <script>
+      function bgChange (id, color) {
+        document.getElementById(id).style.backgroundColor = color
+      }   
+    </script>
+  </head>
+
+  <body id="body1" onkeypress="bgChange('body1', 'white')">
+    <main>
+      <button onclick="bgChange('body1', 'red')">
+        Click to turn the page red.
+      </button>
+      <button ondblclick="bgChange('body1', 'green')">
+        Double-click to turn the page green.
+      </button>
+      <button
+        onmousedown="bgChange('body1', 'orange')"
+        onmouseup="bgChange('body1', 'white')">
+        Click and hold to turn the page orange. On click release turn page
+        white.
+      </button>
+      <a href="#" onmouseover="bgChange('body1', 'pink')">
+        Hover over to turn page pink.
+      </a>
+    </main>
+  </body>
+  
+</html>
