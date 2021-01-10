@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="../normalize.css">
+<link rel="stylesheet" href="../styles.css">
+<script>
+  // Global variable containing time passed
+  let timePassed = 0;
+
+  function checkSentence(sentence, entry) {
+    const msg = document.getElementById('message');
+    if (sentence === entry) {
+      msg.innerHTML = 'You finished in ' + timePassed + ' seconds';
+      return true;
+    }
+    timePassed += .1;
+    timePassed = parseFloat(timePassed.toFixed(1));
+    msg.innerHTML = timePassed + ' seconds';
+    return false;
+  }
+
+  window.addEventListener('load', function() {
+    const sentence = document.getElementById('sentence').innerHTML;
+    const entry = document.getElementById('entry');
+
+    // Entry field event listener to start and stop timer.
+    entry.addEventListener('focus', function() {
+      const interval = setInterval(function() {
+        const result = checkSentence(sentence, entry.value);
+        if (result) {
+          clearInterval(interval);
+        }
+      if (timePassed >= 15){
+        const msg = document.getElementById('message');
+        msg.innerHTML = ("BOOM!!!!!! You're dead");
+          clearInterval(interval)
+        }
+      }, 100);
+    });
+  });
+
+</script>
+<title>Typing Test</title>
+</head>
+<body id="typing-test">
+<main>
+  <div id="container">
+    <h1>Press Tab To Start Timer.</h1>
+    
+    <p id="sentence">No pressure, please defuse the bomb!!!!</p>
+    <input id="entry" placeholder="Click to start timer.">
+    <p id="message">0 seconds</p>
+  </div>
+</main>
+</body>
+</html>
