@@ -6,16 +6,22 @@ h1 {
   font-size: 6em;
   text-align: center;
 }
-
 nav {
   font-size: 1.5em;
+  display: flex;
+  justify-content: space-between;
 }
 
-ul,
-li {
+ul,li {
   display: inline;
   margin: 0;
   padding: 0;
+}
+ul {
+  flex: 1;
+  max-width: 50%;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 /* WIDTH - Enforced only at specided size 800px. */
@@ -26,29 +32,21 @@ h1 {
   color: red;
 }
 
-@media (max-width: 1500px) {
+@media (min-width: 500px){
   h1 {
-    color: orange;
+      color: orange;
   }
 }
-
 /* If using more than one MAX-WIDTH, values should be listed from greatest to lowest. */
 /* If using more that one MIN-WIDTH, values should be listed from lowest to greatest.  */
-@media (max-width: 1200px) {
+@media (min-width: 1000px){
   h1 {
-    color: purple;
+      color: yellow;
   }
 }
-
-@media (max-width: 700px) {
+@media (min-width: 1500px){
   h1 {
-    color: green;
-  }
-}
-
-@media (max-width: 500px) {
-  h1 {
-    color: gray;
+      color: green;
   }
 }
 
@@ -58,3 +56,20 @@ h1 {
         background-color: magenta;
     }
 } */
+
+@media (max-width: 768px){
+  h1 {
+      font-size: 4em;
+  }
+  nav, nav ul {
+      flex-direction: column;
+      align-items: center;
+  }
+
+}
+@media (max-width: 576px){
+  h1 {
+      font-size: 3em;
+  }
+}
+
