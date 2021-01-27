@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /* =========================================
+   =========================================
+      Logical AND exercise
+========================================= 
+========================================= */
+      // Create a constant named "MYSTERY"
+      const hint = alert("HINT: Think 'M8' instead of 'Mate' for next prompt. ")
+      const mystery = prompt(
+        "Enter a string that starts with 'S', is 3 characters long, and includes a '8': "
+      )
+
+      // Using a logical AND check....
+      if (
+        /////// IF mystery string has a capital "P" at index 0
+        mystery[0] === 'S' &&
+        /////// AND if mystery string length is greater than 5
+        mystery.length == 3 &&
+        /////// AND if mystery string includes the "7" character.
+        mystery.indexOf('8') !== -1
+      ) {
+        console.log('YOUR MySTERY STRING MEETS REQUIREMENTS!!!')
+      }
+
+      /* =========================================
+   =========================================
+      Logical OR exercise
+========================================= 
+========================================= */
+      cleanRoom = prompt('Have you cleaned your room? ')
+      feedDog = prompt('Have you fed the dog? ')
+      homeWork = prompt('Have you completed your homework? ')
+
+      if (cleanRoom === 'no' || feedDog === 'no' || homeWork === 'no') {
+        console.log('You MAY NOT play your PS5!!!')
+      } else {
+        console.log('Yes, you MAY play your PS5.')
+      }
+
+        /* =========================================
+      // Combine logical && and || operators
+      ========================================= */
+      const age = prompt('Enter your age: ')
+      if ((age >= 0 && age <= 5) || age >= 65) {
+        console.log('FREE')
+      } else if (age >= 5 && age < 10) {
+        console.log('$10')
+      } else if (age >= 10 && age < 65) {
+        console.log('$20')
+      } else {
+        // Because all valid age ranges have been specified anything outside of range like a NEGATIVE will be invalid
+        console.log('INVALID AGE!!!!')
+      }
+
+      /* =========================================
+      Logical NOT operator
+      !null // true
+      !(0 === 0)  // false - "0 IS NOT equal to 0"
+      !(5 > 10) // false - " 5 IS NOT greater than 10 "
+      -------------------------------------------
+      ------ If not with "!" returns TRUE --------
+      -------------------------------------------
+      ========================================= */
+      let firstName = prompt("Enter first name");
+      // If NOT firstName is true, prompt again
+      if(!firstName) {
+          firstName =  prompt("First Name CAN NOT be blank! TRY AGAIN")
+      } else {
+          console.log(firstName);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // FALSY = "", 0, NaN, null
+
+      const userInput = prompt('Enter something: ')
+      // If user provides a STRING console "TRUTHY"
+      if (userInput) {
+        console.log('Truthy')
+      } else {
+        // else if input is blank or contains a number console "FALSY"
+        console.log('Falsy')
+      }
+
+      // Prompt user for 2 number strings. Convert numbers to integers and add. Determine if "truthy" or "falsy";
+      let num1 = prompt('Enter a number: ')
+      let num2 = prompt('Enter a number: ')
+      console.log(num1)
+      console.log(num2)
+      let sum = parseInt(num1) + parseInt(num2)
+      console.log(sum)
+
+      if (sum) {
+        console.log('Truthy')
+      } else {
+        console.log('Falsy')
+      }
+
+
+    
+
+
+    </script>
+  </body>
+</html>

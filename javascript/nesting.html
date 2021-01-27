@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Prompt user for password. Check if password contains more than 6 characters and do not contain blank spaces.
+      const password = prompt('Please enter a your password: ')
+
+      // ==========================================
+      //password must be 6+ characters
+      if (password.length >= 6) {
+        console.log('Password is long enough.')
+      } else {
+        console.log('Password must contain 6 or more charaters: ')
+      }
+      // password cannot include space
+
+      if (password.indexOf(' ') === -1) {
+        console.log('Password DOES NOT contain a space.')
+      } else {
+        console.log('Password CAN NOT CONTAIN a SPACE.')
+      }
+
+      // ==========================================
+      // ==========================================
+      // REWRITE CODE above with a NESTED conditional
+      // ==========================================
+      const password2 = prompt('Please enter a your password: ')
+
+      if (password2.length >= 6) {
+        // If condition is met, proceed to NESTED condition
+        if (password2.indexOf(' ') === -1) {
+          console.log('Valid Password')
+        } else {
+          console.log('Password cannot contain spaces.')
+        }
+      } else {
+        console.log('Password must contain 6 or more characters. ')
+      }
+
+
+    </script>
+  </body>
+</html>
