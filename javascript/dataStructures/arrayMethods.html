@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let colors = [
+        'red',
+        'blue',
+        'orange',
+        'yellow',
+        'pink',
+        'green',
+        'violet',
+        'brown',
+        'black'
+      ]
+
+      let cats = ['blue', 'kitty', 'puma']
+      let dogs = ['rusty', 'wyatt']
+
+      // Join two arrays with CONCATE
+      let pets = cats.concat(dogs)
+      console.log(pets)
+
+      // Determine if array includes a "string"
+      console.log(cats.includes('puma'))
+
+      // Return index of ITEM in array
+      console.log(pets.indexOf('rusty'))
+
+      // REVRSE an array changing the original
+      console.log(pets.reverse())
+      console.log(pets)
+
+      // SLICE returns range of items from array
+      console.log(pets.slice(1, 4))
+
+      // SPLICE - start item, delete specifed number of items, then itesm to add
+
+      console.log(colors)
+      console.log(colors.splice(2, 3, 'purple'))
+      console.log(colors)
+
+      // use SPLICE to add items BEFORE specified item in array
+      colors.splice(2, 0, "orange", "yellow", "pink");
+      console.log(colors);
+
+      // =====================================
+      // SORT - Alphabet 
+      // To sort numbers a custom function using SORT should be used.
+      // =====================================
+console.log(colors.sort());
+    </script>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Element With JavaScript</title>
+
+
+</head>
+<body>
+
+    <h2>Add an element with JavaScript</h2>
+
+    <div id="yellow" style="background-color: yellow; width:200px; height:20px;">
+    </div>
+    <div id="green" style="background-color: green; width:200px; height:20px;"></div>
+    
+
+    
+
+    <script>
+        // Create a DIV element.
+        let element = document.createElement('div');
+        
+        // Add style to div element
+        element.style.cssText = "width:200px; height:20px; background: blue;";
+
+        // Add listner;
+        element.onclick = function(){ alert('hello');}
+
+        // APPENDCHILD method - what element to change
+        // document.body.appendChild(element);
+
+        //===========================================
+        // 1. Specify location to add element by referencing existing elements using ID.
+       let target = document.getElementById('yellow');
+       // 2. Target parent element
+       document.body.insertBefore(element, target);
+
+
+
+
+        //==================================
+                //==================================
+        //==================================
+
+
+
+
+    </script>
+</body>
+</html>
