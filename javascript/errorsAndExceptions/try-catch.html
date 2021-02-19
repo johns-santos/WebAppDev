@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="../normalize.css" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script>
+      function displayAnswer (e) {
+        const dividendField = document.getElementById('dividend')
+        const divisorField = document.getElementById('divisor')
+        const msgField = document.getElementById('msg')
+
+        // TRY/CATCH block 
+        try {
+          // Convert input into INTEGERS
+          const dividend = parseInt(dividendField.value)
+          const divisor = parseInt(divisorField.value)
+  
+          if (divisor === 0) {
+            throw new Error('Please enter a number other than 0.')
+          }
+          if (isNaN(dividend) || isNaN(divisor)) {
+            throw new Error('Please enter numbers only.')
+          }
+
+          // quotient does the math
+          const quotient = dividend / divisor
+          // if 
+          if (isNaN(quotient)) {
+            throw new Error('Cannot solve this equation.')
+          }
+
+          msgField.innerHTML =
+            String(dividend) +
+            ' / ' +
+            String(divisor) +
+            ' = ' +
+            String(quotient)
+        } catch (e) {
+          msgField.innerHTML = 'There was a problem: ' + e.message
+        }
+      }
+
+      window.addEventListener('load', function () {
+        const equals = document.getElementById('equals')
+        equals.addEventListener('click', displayAnswer, false)
+      })
+    </script>
+    <title>Try/Catch</title>
+  </head>
+  <body>
+    <main>
+      <input type="text" id="dividend" class="operator" /> /
+      <input type="text" id="divisor" class="operator" />
+      <button id="equals">=</button>
+      <output id="msg"></output>
+    </main>
+  </body>
+</html>
