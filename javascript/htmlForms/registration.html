@@ -1,37 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Registration Form</title>
-</head>
-<body>
-<h1>Registration Form</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Registration Form</title>
+  </head>
+  <body>
+    <h1>Registration Form</h1>
 
-<form method="post" action="https://www.webucator.com/course-demos/htm101/process-form.cfm">
-<input type="hidden" name="secretcode" id="secretcode" value="42">
-<div>
-    <label for="username">Username:</label>
-    <input type="text" id="username" name="username">
-</div>
-<div>
-    <label for="pw">Password: </label>
-    <input type="password" id="pw" name="pw">
-</div>
-<div>
-    <label for="pw2">Repeat Password: </label>
-    <input type="password" id="pw2" name="pw2">
-</div>
+    <!-- POST:send data to server ACTION:url/server to send -->
+    <form
+      method="post"
+      action="https://www.webucator.com/course-demos/htm101/process-form.cfm"
+    >
+      <input type="hidden" name="secretcode" id="secretcode" value="42" />
+      <div>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" />
+      </div>
+      <div>
+        <label for="pw">Password: </label>
+        <input type="password" id="pw" name="pw" />
+      </div>
+      <div>
+        <label for="pw2">Repeat Password: </label>
+        <input type="password" id="pw2" name="pw2" />
+      </div>
 
-<div>
-    <label for="submit"></label>
-    <input type="submit" id="submit1" name="submit">
+      <div>
+        Dominant Hand:
+        <label>
+          Right
+          <input type="radio" name="dom-hand" id="hand-right" value="right" />
+        </label>
 
-    <label for="reset"></label>
-    <input type="reset" id="reset" name="reset">
-</div>
+        <label>
+          Left
+          <input type="radio" name="dom-hand" id="hand-left" value="left" />
+        </label>
+      </div>
 
-</form>
+      <div>
+        <label for="terms">Click to accept our terms: </label>
+        <input type="checkbox" name="terms" id="terms" required>
+      </div>
 
-</body>
+      <div>
+        <label for="submit"></label>
+        <input type="submit" id="submit1" name="submit" >
+
+        <label for="reset"></label>
+        <input type="reset" id="reset" name="reset" />
+      </div>
+    </form>
+  </body>
 </html>
