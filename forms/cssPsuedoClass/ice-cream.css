@@ -1,0 +1,122 @@
+/* Your styles here */
+
+form {
+  width: 500px;
+  margin: auto;
+}
+
+label {
+  display: block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  margin: 5px 0px;
+}
+
+legend {
+    font-weight: bold;
+}
+
+
+input,
+select,
+textarea,
+fieldset {
+  box-sizing: border-box;
+  font-size: large;
+  padding: 4px;
+  width: 100%;
+}
+
+fieldset {
+    margin: 10px 0px;
+    padding: 15px;
+}
+
+fieldset label,
+label[for='terms'] {
+  display: inline;
+  font-weight: normal;
+}
+
+
+input[type='checkbox'],
+input[type='radio'] {
+  margin: 0 5px;
+  width: auto;
+}
+
+button {
+  background-color: green;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-large;
+  margin-top: 10px;
+  padding: 5px;
+  width: 100%;
+  border: solid 3px darkgreen;
+}
+
+
+/*===================================
+== CSS psuedo-class form validation ==
+===================================== */
+input:invalid,
+textarea:invalid,
+select:invalid {
+  background-color: pink;
+  background-image: url('../Images/warning.png');
+  background-position: 99% 5px;
+  /* eanble to no-repeat to prvent multiple images */
+  background-repeat: no-repeat;
+}
+
+select:invalid{
+    background-position: 95%;;
+}
+
+input:required,
+select:required,
+#container {
+  border-bottom: 4px solid green;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+    border-right: 10px solid brown;
+}
+
+label.required,
+legend.required {
+  color: green;
+  cursor: help;
+}
+
+label.required:after,
+legend.required::after {
+  color: green;
+  content: '*';
+  font-weight: normal;
+}
+
+label.required:hover::after,
+legend.required:hover::after {
+  content: 'field required';
+  margin-left: 5px;
+}
+
+
+input[type='checkbox']:invalid + label {
+  color: red;
+}
+
+
+
+
+
+
+
+
+
+
+
